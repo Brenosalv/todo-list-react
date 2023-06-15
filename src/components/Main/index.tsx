@@ -6,35 +6,7 @@ import { TaskType } from "../TodoList/todoList.model";
 import styles from './main.module.css';
 
 export const Main = () => {
-  const initialTasks: TaskType[] = [
-    {
-      id: uuidv4(),
-      isDone: false,
-      text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: uuidv4(),
-      isDone: false,
-      text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: uuidv4(),
-      isDone: false,
-      text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: uuidv4(),
-      isDone: true,
-      text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: uuidv4(),
-      isDone: true,
-      text: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    }
-  ];
-
-  const [tasks, setTasks] = useState<TaskType[]>(initialTasks);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
 
   function handleAddTask(newTaskText: string) {
     event?.preventDefault();
